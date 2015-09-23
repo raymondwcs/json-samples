@@ -7,8 +7,6 @@ var options = {
     method: 'GET'
 };
 
-var temperature = 0.0;
-
 var req = http.request(options, function(res) {
     res.setEncoding('utf8');
 
