@@ -7,6 +7,7 @@ var options = {
     method: 'GET'
 };
 
+var APIKEY="";       //**your API key***
 var req = http.request(options, function(res) {
     res.setEncoding('utf8');
 
