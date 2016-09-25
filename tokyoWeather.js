@@ -1,13 +1,14 @@
 var http = require('http');
 
+var APIKEY="";       //**your API key***
+
 var options = {
     host: 'api.openweathermap.org',
     port: 80,
-    path: '/data/2.5/weather?q=Tokyo,jp&units=metric',
+    path: '/data/2.5/weather?q=Tokyo,jp&units=metric' + APIKEY,
     method: 'GET'
 };
 
-var APIKEY="";       //**your API key***
 var req = http.request(options, function(res) {
     res.setEncoding('utf8');
 
