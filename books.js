@@ -27,5 +27,5 @@ var books = [
 	 ]}
 ];   
 
-// Write a Node.JS script that reports 
+// Write a Node.js script that reports 
 // the average score of each book in books
