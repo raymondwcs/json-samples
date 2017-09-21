@@ -5,7 +5,7 @@ var APIKEY="";       //**your API key***
 var options = {
     host: 'api.openweathermap.org',
     port: 80,
-    path: '/data/2.5/weather?q=Tokyo,jp&units=metric' + APIKEY,
+    path: '/data/2.5/weather?q=Tokyo,jp&units=metric&APPID=' + APIKEY,
     method: 'GET'
 };
 
@@ -14,6 +14,7 @@ var req = http.request(options, function(res) {
 
     res.on('data', function (chunk) {
         var jsonObj = JSON.parse(chunk);
+        console.log(chunk);
         console.log("Current Temp. : " + jsonObj.main.temp);
         console.log("Max Temp : "      + jsonObj.main.temp_max);
         console.log("Min Temp : "      + jsonObj.main.temp_min);
