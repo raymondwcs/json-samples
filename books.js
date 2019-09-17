@@ -1,4 +1,4 @@
-var books = [ 
+const books = [ 
 	{name: "Pascal Made Simple", 
 	 price: 700, 
 	 stock: 3,
