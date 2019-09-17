@@ -7,14 +7,22 @@ function SimpleInterests() {
 }
 */
 class SimpleInterests {
-	constructor(p,r,t) {
+	constructor(p=1000000,r=0.01,t=10) {
 		this.principal = p;
 		this.rate = r;
 		this.period = t;
 		this.interests = this.principal * this.rate * this.period;
 	}
+
+	print() {
+		console.log(`Interests for $${this.principal} at a yearly rate of \
+${this.rate *100}% for ${this.period} years = $${this.interests}`);
+
+	}
 }
 
-let obj = new SimpleInterests(10000,0.03,10);
-console.log(`Interests for $${obj.principal} at a yearly rate of \
-${obj.rate *100}% for ${obj.period} years = $${obj.interests}`);
+let obj1 = new SimpleInterests();
+obj1.print();
+
+let obj2 = new SimpleInterests(10000,0.03,10);
+obj2.print();
