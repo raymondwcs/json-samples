@@ -15,7 +15,7 @@ class SimpleInterests {
 	}
 
 	print() {
-		console.log(`Interests for $${this.principal} at a yearly rate of \
+		console.log(`Interests for $${this.principal} at an annual rate of \
 ${this.rate *100}% for ${this.period} years = $${this.interests}`);
 	}
 }
