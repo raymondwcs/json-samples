@@ -26,7 +26,7 @@ for (let index in programmer) {
     }
 }
 
-var me = {};                            // a empty json object
+var me = {};                            // an empty json object
 me.name = 'Batman';                     // add key-value pairs
 me.title = 'Hero';
 programmer.push(me);
