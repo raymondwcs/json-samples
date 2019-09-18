@@ -20,7 +20,7 @@ programmer.push(JSON.parse(new_employee));
 for (let index in programmer) {
     let e = programmer[index];
     e['title'] = 'programmer';          // add a new key-value pair
-    console.log(`${e.name} now has a title ${e.title}`);
+    console.log(`${e.name} now has a ${e.title} title`);
     if (e.hasOwnProperty('age')) {
         delete e['age'];                // delete a key-value pair
     }
