@@ -29,6 +29,11 @@ for (let index in programmer) {
 var me = {};                            // an empty json object
 me.name = 'Batman';                     // add key-value pairs
 me.title = 'Hero';
+me.skill = ['hacking', 'node.js', 'mongoDB'];
+me.email = {
+    work: 'batman@gotham.gov',
+    home: 'batman@batcave.com'
+}
 programmer.push(me);
 
 console.log(programmer);
