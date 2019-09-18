@@ -13,7 +13,7 @@ const req = http.request(options, (res) => {
     res.on('data', (chunk) => {
         var jsonObj = JSON.parse(chunk); // convert to JSON
         console.log(chunk);
-		  console.log(`Tokyo is located at [${jsonObj.coord.lon},${jsonObj.coord.lat}]`);
+		console.log(`Tokyo is located at [${jsonObj.coord.lon},${jsonObj.coord.lat}]`);
     });
 });
 
