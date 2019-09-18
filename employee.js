@@ -22,8 +22,13 @@ for (let index in programmer) {
     e['title'] = 'programmer';          // add a new key-value pair
     console.log(`${e.name} now has a ${e.title} title`);
     if (e.hasOwnProperty('age')) {
-        delete e['age'];                // delete a key-value pair
+        delete e.age;                   // delete a key-value pair
     }
 }
+
+var me = {};                            // a empty json object
+me.name = 'Batman';                     // add key-value pairs
+me.title = 'Hero';
+programmer.push(me);
 
 console.log(programmer);
