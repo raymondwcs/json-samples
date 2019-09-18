@@ -8,8 +8,8 @@ const options = {
 };
 
 const req = http.request(options, (res) => {
-    res.on('data', (chunk) => {
-        var jsonObj = JSON.parse(chunk); // convert from string to json object
+    res.on('data', (data) => {
+        var jsonObj = JSON.parse(data); // convert from string to json object
         console.log(jsonObj);
         if (res.statusCode == 200) {
             console.log(`Tokyo is located at [${jsonObj.coord.lon},${jsonObj.coord.lat}]`);
@@ -17,10 +17,10 @@ const req = http.request(options, (res) => {
             console.log(`Request failed. HTTP response code = ${res.statusCode}`);
         }
     });
+});
 
-    req.on('error', (error) => {
-        console.log(`Problem with request: ${error.message}`);
-    });
+req.on('error', (error) => {
+    console.log(`Problem with request: ${error.message}`);
 });
 
 req.end();
