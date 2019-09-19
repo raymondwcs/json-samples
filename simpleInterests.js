@@ -11,7 +11,7 @@ const rate = 0.01;
 const period = 10;
 
 class SimpleInterests {
-	constructor(p=principal,r=rate,t=period) {
+	constructor(p = principal,r = rate,t = period) { // default parameter values
 		this.principal = p;
 		this.rate = r;
 		this.period = t;
