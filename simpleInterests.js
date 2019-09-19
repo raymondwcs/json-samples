@@ -18,20 +18,23 @@ class SimpleInterests {
 		this.interests = this.principal * this.rate * this.period;
 	}
 
-	print() {
-		console.log(`Interests for $${this.principal} at an annual rate of \
+	toString() {
+		return(`Interests for $${this.principal} at an annual rate of \
 ${this.rate *100}% for ${this.period} years = $${this.interests}`);
 	}
 }
 
 let obj1 = new SimpleInterests();
-obj1.print();
+console.log(obj1);
 
 let obj2 = new SimpleInterests(10000);
-obj2.print();
+console.log(obj2);
 
 let obj3 = new SimpleInterests(10000,0.03);
-obj3.print();
+console.log(obj3);
 
 let obj4 = new SimpleInterests(10000,0.03,10);
-obj4.print();
+console.log(obj4);
+
+let obj5 = new SimpleInterests(10000,undefined,10);
+console.log(obj5);
