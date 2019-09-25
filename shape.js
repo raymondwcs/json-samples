@@ -8,11 +8,14 @@ class Shape {
         this.Y = y;
     }
     distance_from_origin() {
+        // Euclidean distance
         return Math.sqrt(this.X*this.X + this.Y*this.Y);
     }
 }
 
 let s = new Shape();
+console.log(s.distance_from_origin());
+
 s.move(10,10);
 console.log(s.distance_from_origin());
 
