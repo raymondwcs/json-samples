@@ -20,7 +20,7 @@ s.move(10,10);
 console.log(s.distance_from_origin());
 
 class Square extends Shape {
-    constructor(width = 5) {
+    constructor(width = 1) {   // default width
         super();
         this.width = width;
     }
