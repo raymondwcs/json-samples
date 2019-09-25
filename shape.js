@@ -9,7 +9,7 @@ class Shape {
     }
     distance_from_origin() {
         // Euclidean distance
-        return Math.sqrt(this.X*this.X + this.Y*this.Y);
+        return Math.sqrt(this.X**2 + this.Y**2);
     }
 }
 
@@ -25,7 +25,7 @@ class Square extends Shape {
         this.width = width;
     }
     area() {
-        return(this.width * this.width);
+        return(this.width**2);
     }
 }
 
