@@ -30,8 +30,10 @@ class Square extends Shape {
 }
 
 let sq = new Square();
-sq.move(-5,-5);
 sq.width = 5;
+console.log(sq.area());
+
+sq.move(-5,-5);
 console.log(sq.distance_from_origin());
 
 console.log(sq instanceof Square);
