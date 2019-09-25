@@ -25,7 +25,7 @@ ${this.rate *100}% for ${this.period} years = $${this.interests}`);
 }
 
 let obj1 = new SimpleInterests();
-console.log(obj1);
+console.log(obj1.toString());
 
 let obj2 = new SimpleInterests(10000);
 console.log(obj2);
@@ -38,3 +38,14 @@ console.log(obj4);
 
 let obj5 = new SimpleInterests(10000,undefined,10);
 console.log(obj5);
+
+class Xinterests extends SimpleInterests {
+	constructor(p = principal, r = rate, t = period, discount = 0.05) {
+		super(p,r,t);
+		this.discount = 0.05;
+		this.interests *= 1 - this.discount;
+	}
+}
+
+let obj6 = new Xinterests();
+console.log(obj6);
