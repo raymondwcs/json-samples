@@ -1,2 +1,2 @@
 # json-samples
-Various JSON related samples for COMPS381F
+Examples of processing JSON using Node.js
