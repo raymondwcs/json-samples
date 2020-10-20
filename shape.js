@@ -1,7 +1,7 @@
-class Shape {
-    constructor() {
-        this.X = 0;
-        this.Y = 0;
+class Point {
+    constructor(x = 0, y = 0) {
+        this.X = x;
+        this.Y = y
     }
     move(x,y) {
         this.X = x;
@@ -13,19 +13,19 @@ class Shape {
     }
 }
 
-let s = new Shape();
-console.log(s.distance_from_origin());
+let p = new Point();
+console.log(p.distance_from_origin());
 
-s.move(10,10);
-console.log(s.distance_from_origin());
+p.move(10,10);
+console.log(p.distance_from_origin());
 
-class Square extends Shape {
+class Square extends Point {
     constructor(width = 1) {   // default width
         super();
-        this.width = width;
+        this.Width = width;
     }
     area() {
-        return(this.width**2);
+        return(this.Width**2);
     }
 }
 
@@ -37,5 +37,5 @@ sq.move(-5,-5);
 console.log(sq.distance_from_origin());
 
 console.log(sq instanceof Square);
-console.log(sq instanceof Shape);
+console.log(sq instanceof Point);
 console.log(sq instanceof Date);
